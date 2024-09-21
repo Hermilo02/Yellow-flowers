@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <img class="img" src="cajita.webp" alt="Descripción de la imagen">
+</head>
+
+<body>
+    <div class="greetings">
+        <span>H</span>
+        <span>O</span>
+        <span>L</span>
+        <span>A</span>
+    </div>
+    <div class="description">
+        <span>"Guardo algo especial para ti, espero que te guste."</span>
+    </div>
+
+    <div class="button">
+        <button id="openButton">Haz click aquí</button>
+    </div>
+
+    <script>
+        document.getElementById("openButton").addEventListener("click", function () {
+            const link = document.createElement('link');
+link.rel = 'stylesheet';
+link.href = 'Flores-amarillas-main/css/main.css';
+document.head.appendChild(link);
+
+
+            document.body.innerHTML = `
+          <div class="content">
+            <div class="left">
+                <div class="night"></div> <!-- Este es el fondo nocturno -->
+                    <h2>Un detalle con mucho cariño para ti</h2>
+                    <p>Sé lo mucho que querías tus flores amarillas y mientras yo este nunca serás espectadora.</p> 
+                    <p>No se me da muy bien redactar estas cosas. Has hecho este año el mejor de todos, creo que no 
+                    tengo forma de agradecerte todo lo que has hecho por mí. Si bien la distancia ha jugado un papel
+                    muy importante, has logrado hacer que no se note, siempre vas a tener un lugar importante en mi 
+                    corazón y siempre estarás presente en mi vida, te quiero demasiado y aunque parezca poquito para 
+                    mi parece infinito y si, nadie más va a poder remplazarte si algún día tú te vas. Si algún día 
+                    sientes que no puedes o el mundo se te viene encima recuerda que siempre estaré para ti. Donde 
+                    sea que vayas, ahí es donde iré y siempre te voy a querer y apoyar como si fuera la última. Incluso 
+                    si el mundo se acaba siempre voy a estar contigo. Eres una chica increíble que no cambiaría nada de ti, 
+                    solamente que te bañes más seguido y comas a tus horas, pero fuera de eso te quiero tal como eres. 
+                    Te lo digo una vez más, esa noche que te conocí fue lo mejor que me pudo haber pasado, te quiero mucho niña,
+                    ojalá poder entregarte estas flores en persona y poder darte ese abrazo que tanto anhelo. Espero que se haya 
+                    entendido lo que quise decir, aunque aún me faltaron cosas pero no quiero se vuelva muy extenso</p>
+                    
+                </div>
+                <div class="right">
+                    <iframe src="Flores-amarillas-main/FLORES.html" style="width: 100%; height: 100%; border: none;"></iframe>
+                </div>
+            </div>
+
+        
+        <audio autoplay loop>
+            <source src="tu-cancion.mp3" type="audio/mpeg">
+            Tu navegador no soporta la etiqueta de audio.
+        </audio>
+        <div class="button">
+            <button id="backButton">Volver a la página principal</button>
+        </div>
+        
+        
+    `;
+
+            // Añadir evento al botón "Volver"
+            document.getElementById("backButton").addEventListener("click", function () {
+                location.reload();
+            });
+        });
+
+    </script>
+</body>
+
+</html>
